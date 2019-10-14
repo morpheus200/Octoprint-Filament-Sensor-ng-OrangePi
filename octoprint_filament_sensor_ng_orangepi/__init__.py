@@ -16,7 +16,7 @@ class filamentsensorngOrangePiPlugin(octoprint.plugin.StartupPlugin,
     def initialize(self):
         self._logger.info("Running OPi.GPIO")
         GPIO.setwarnings(False)        # Disable GPIO warnings
-				GPIO.setboard(GPIO.ZEROPLUS)
+	GPIO.setboard(GPIO.ZEROPLUS)
         self.filamentsensorngOrangePiPlugin_confirmations_tracking = 0
 
     @property
@@ -49,7 +49,7 @@ class filamentsensorngOrangePiPlugin(octoprint.plugin.StartupPlugin,
 
     def _setup_sensor(self):
         if self.sensor_enabled():
-            self._logger.info("Using SUNXI Mode")
+            self._logger.info("Using BCM Mode")
             GPIO.setmode(GPIO.BCM)
             self._logger.info("Filament Sensor active on GPIO Pin [%s]"%self.pin)
             GPIO.setup(self.pin, GPIO.IN, GPIO.HIGH)
