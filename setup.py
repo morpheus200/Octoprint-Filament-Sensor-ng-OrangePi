@@ -14,20 +14,20 @@ plugin_package = "octoprint_filament_sensor_ng_orangepi"
 plugin_name = "FilamentSensor-OrangePi"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "1.0.2"
+plugin_version = "1.0.3"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
 plugin_description = """A filament monitor that pauses the print when your filament runs out and lets you restart it."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Deadly"
+plugin_author = "Morpheus200"
 
 # The plugin's author's mail address.
-plugin_author_email = "deadly676@gmail.com"
+plugin_author_email = "hammfrank83@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/deadly667/Octoprint-Filament-Sensor-ng-OrangePi"
+plugin_url = "https://github.com/morpheus200/Octoprint-Filament-Sensor-ng-OrangePi"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "GPLv3"
