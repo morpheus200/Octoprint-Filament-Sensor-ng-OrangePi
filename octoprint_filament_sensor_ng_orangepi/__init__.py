@@ -16,6 +16,7 @@ class filamentsensorngOrangePiPlugin(octoprint.plugin.StartupPlugin,
     def initialize(self):
         self._logger.info("Running OPi.GPIO")
         GPIO.setwarnings(False)        # Disable GPIO warnings
+				GPIO.setboard(GPIO.ZEROPLUS)
         self.filamentsensorngOrangePiPlugin_confirmations_tracking = 0
 
     @property
@@ -49,7 +50,7 @@ class filamentsensorngOrangePiPlugin(octoprint.plugin.StartupPlugin,
     def _setup_sensor(self):
         if self.sensor_enabled():
             self._logger.info("Using SUNXI Mode")
-            GPIO.setmode(GPIO.SUNXI)
+            GPIO.setmode(GPIO.BCM)
             self._logger.info("Filament Sensor active on GPIO Pin [%s]"%self.pin)
             GPIO.setup(self.pin, GPIO.IN, GPIO.HIGH)
         else:
@@ -149,17 +150,17 @@ class filamentsensorngOrangePiPlugin(octoprint.plugin.StartupPlugin,
 
                 # version check: github repository
                 type="github_release",
-                user="deadly667",
+                user="morpheus200",
                 repo="Octoprint-Filament-Sensor-ng-Orangepi",
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/deadly667/Octoprint-Filament-Sensor-ng-OrangePi/archive/master.zip"
+                pip="https://github.com/morpheus200/Octoprint-Filament-Sensor-ng-OrangePi/archive/master.zip"
             )
         )
 
 __plugin_name__ = "FilamentSensor OrangePi"
-__plugin_version__ = "1.0.2"
+__plugin_version__ = "1.0.3"
 
 def __plugin_load__():
     global __plugin_implementation__
